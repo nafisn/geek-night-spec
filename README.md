@@ -97,23 +97,7 @@
     "createdBy": "CoolDude99x",
     "createdOn": "2018-08-02 12:20:34",
     "numSongs": 50,
-    "totalDuration": "04:55:00",
-    "songs": [
-        {
-            "id": 1,
-            "title": "My Favorite Song",
-            "duration": "00:03:30",
-            "isExplicit": false,
-            "isFavorite": false
-        },
-        {
-            "id": 12,
-            "title": "My Real Favorite Song",
-            "duration": "00:03:30",
-            "isExplicit": false,
-            "isFavorite": true
-        }
-    ]
+    "totalDuration": "04:55:00"
 }
 ```
 
