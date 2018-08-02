@@ -1,4 +1,121 @@
-# {App} API Spec
+# Geek Night API Spec
+
+## Json Objects returned by API:
+
+### Song (Simple)
+
+```json
+{
+    "id": 1,
+    "title": "My Favorite Song",
+    "duration": "00:03:30",
+    "isExplicit": false,
+    "isFavorite": true
+}
+```
+
+### Song (Detailed)
+
+```json
+{
+    "id": 1,
+    "title": "My Favorite Song",
+    "duration": "00:03:30",
+    "isExplicit": false,
+    "isFavorite": true,
+    "album": {
+        "id": 3,
+        "title": "Album Title",
+        "artistId": {
+            "id": 2,
+            "name": "Artist Name",
+            "genre": {
+                "id": 5,
+                "name": "Nu-Ironic Transcendental Banjo Electronica"
+            },
+            "monthlyListeners": 2,
+            "following": true,
+        },
+        "genre": {
+            "id": 4,
+            "name": "Meh Pop",
+        },
+        "duration": "00:04:32",
+        "isExplicit": false,
+        "isFavorite": true
+    }
+}
+```
+
+### Artist
+
+```json
+{
+    "id": 2,
+    "name": "Artist",
+    "genre": {
+        "id": 5,
+        "name": "Nu-Ironic Transcendental Banjo Electronica"
+    },
+    "monthlyListeners": 2,
+    "following": true,
+}
+```
+
+### Album
+
+```json
+{
+    "id": 3,
+    "title": "Title",
+    "artistId": 3,
+    "genre": {
+        "id": 4,
+        "name": "Meh Pop",
+    },
+    "duration": "00:04:32",
+    "isExplicit": false,
+    "isFavorite": true,
+}
+```
+
+### Genre
+
+```json
+{
+    "id": 4,
+    "name": "Meh Pop",
+}
+```
+
+### Playlist
+
+```json
+{
+    "id": 4,
+    "title": "Cool Tunes for Cool Dudes",
+    "createdBy": "CoolDude99x",
+    "createdOn": "2018-08-02 12:20:34",
+    "numSongs": 50,
+    "totalDuration": "04:55:00",
+    "songs": [
+        {
+            "id": 1,
+            "title": "My Favorite Song",
+            "duration": "00:03:30",
+            "isExplicit": false,
+            "isFavorite": false
+        },
+        {
+            "id": 12,
+            "title": "My Real Favorite Song",
+            "duration": "00:03:30",
+            "isExplicit": false,
+            "isFavorite": true
+        }
+    ]
+}
+```
 
 ## Endpoints:
 
@@ -23,7 +140,7 @@ Get one artist | `GET /artist/:artistId`
 Create a new artist | `POST /artist`
 Update an artist | `PUT /artist/:artistId`
 Remove an artist | `DELETE /artist/:artistId`
-Get all songs created by artist | `GET /artist/:artistId/songs`
+Get all albums created by artist | `GET /artist/:artistId/albums`
 Follow an artist | `POST /artist/:artistId/follow`
 Un-Follow an artist | `DELETE /artist/:artistId/follow`
 
