@@ -137,6 +137,8 @@ Get one genre | `GET /genre/:genreId`
 Create a new genre | `POST /genre`
 Update a genre | `PUT /genre/:genreId`
 Remove a genre | `DELETE /genre/:genreId`
+Get all albums by genre | `GET /genre/:genreId/albums`
+Get all artists by genre | `GET /genre/:genreId/artists`
 
 ### Album
 
